@@ -143,7 +143,7 @@ static struct device_t * sdhci_v3s_probe(struct driver_t * drv, struct dtnode_t 
 	pdat->cdcfg = dt_read_int(n, "cd-gpio-config", -1);
 
 	sdhci->name = alloc_device_name(dt_read_name(n), -1);
-	sdhci->voltages = MMC_VDD_33_34;
+	sdhci->voltage = MMC_VDD_33_34;
 	sdhci->width = MMC_BUS_WIDTH_4;
 	sdhci->clock = 26 * 1000 * 1000;
 	sdhci->removeable = TRUE;
